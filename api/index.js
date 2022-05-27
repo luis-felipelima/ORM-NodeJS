@@ -1,17 +1,11 @@
+/* eslint-disable import/extensions */
 import express from 'express';
-import bodyParser from 'body-parser';
+import routes from './routes/index.js';
 
 const app = express();
-
-app.use(bodyParser.json());
-
 const port = 3000;
 
-app.get('/teste', (req, res) => {
-  res
-    .status(200)
-    .send({ mensagem: 'Boas vindas a API' });
-});
+routes(app);
 
 app.listen(port, () => {
   console.log(`Servidor está rodando na porta ${port}`);
