@@ -6,7 +6,7 @@ import require from 'requirejs';
 // const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 // eslint-disable-next-line import/no-dynamic-require
-const config = require('../config/config.json')[env];
+const config = require(['../config/config.json'])[env];
 
 const db = {};
 

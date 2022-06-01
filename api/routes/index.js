@@ -8,6 +8,7 @@ import turma from './turmaRoute.js';
 function routes(app) {
   app.use(
     bodyParser.json(),
+    bodyParser.urlencoded({ extended: false }),
     pessoa,
     nivel,
     turma,

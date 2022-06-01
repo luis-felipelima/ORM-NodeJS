@@ -1,5 +1,6 @@
+/* eslint-disable import/extensions */
 import { Router } from 'express';
-import NivelController from '../controllers/nivelController';
+import NivelController from '../controllers/nivelController.js';
 
 const router = Router();
 
